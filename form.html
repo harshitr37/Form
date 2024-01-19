@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>CSS Form</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+ integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" 
+ crossorigin="anonymous" referrerpolicy="no-referrer" >
+<link rel="stylesheet" href="f.css">
+</head>
+<body class="sec">
+
+<form class="formbox"  method="post" name="reg" >
+	
+<div class="toggle"> </div>    
+
+<h1 >Login Form</h1>
+<table align="center" >
+	<th align="left">Email</th>
+	<tr >
+		<td><input type ="email" name= "fname" placeholder="Enter your valid email address" id="box">
+		</td>
+	</tr>
+	<th align="left">Password</th>
+	<tr>
+		
+		<td><input type ="password" name= "password" placeholder="Enter your password" id="box2">
+		</td>
+	</tr>
+	<tr>
+		<td>
+<a style="text-decoration:none;"  href="https://accounts.google.com/v3/signin/identifier?dsh=S1342759930%3A1684768359884847&ifkv=Af_xneEYNhdQSQA7nSOinl_vunPkD1Fml_IQSTVzQLcNiaqSeDSNLxVUw1LLXrbPngP4nzqnSV4kDw&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Forgot password?</a></td>
+</tr>
+<tr>
+	<td align="center"><input type="submit" value="Login" class="button2" onclick="fun()"></td>
+</tr>
+<tr >
+	<td align="center">Not a member? <a>Signup now</a></td>
+    
+</tr>
+</table>
+
+</form>
+
+<script>
+	function fun ()
+{
+var form= document.reg;
+if(form.fname.value=="")
+{
+alert("Enter Your Email");
+}
+else if(form.password.value=="")
+{
+alert("Enter Password");
+}
+else
+{
+alert("LOGIN Successfully");
+}
+}
+
+const sec= document.querySelector('.sec');
+const toggle= document.querySelector('.toggle');
+toggle.onclick = function(){
+	sec.classList.toggle('dark')
+}
+</script>
+</body>
+</html>
